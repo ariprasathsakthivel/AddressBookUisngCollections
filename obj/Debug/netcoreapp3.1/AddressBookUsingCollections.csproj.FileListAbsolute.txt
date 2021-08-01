@@ -1,0 +1,13 @@
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.exe
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.deps.json
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.runtimeconfig.json
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.runtimeconfig.dev.json
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.dll
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\AddressBookUsingCollections.pdb
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.csproj.AssemblyReference.cache
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.AssemblyInfoInputs.cache
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.AssemblyInfo.cs
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.csproj.CoreCompileInputs.cache
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.dll
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.pdb
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.genruntimeconfig.cache

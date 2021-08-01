@@ -69,59 +69,65 @@ namespace AddressBookUsingCollections
         {
             Console.WriteLine("Enter the first name of the person whoom you want to edit the details");
             string editKey = Console.ReadLine();
+            int flag = 0;
             if (addressBook.Count > 0)
             {
                 foreach (Contacts contact in addressBook)
                 {
                     if (editKey.ToLower() == contact.firstName.ToLower())
                     {
-                        Console.WriteLine("Enter the key number for editing the details\n 1. First name\n 2. Last name\n 3. Address\n 4. City\n 5. State\n 6. Zipcode\n 7. Phone number\n 8. Email ID");
-                        int key = Convert.ToInt32(Console.ReadLine());
-                        switch (key)
+                        while (true)
                         {
-                            case 1:
-                                Console.WriteLine("Enter the new First name");
-                                contact.firstName = Console.ReadLine();
+                            Console.WriteLine("Enter the key number for editing the details\n 1. First name\n 2. Last name\n 3. Address\n 4. City\n 5. State\n 6. Zipcode\n 7. Phone number\n 8. Email ID\n 9. Exit editor");
+                            int key = Convert.ToInt32(Console.ReadLine());
+                            switch (key)
+                            {
+                                case 1:
+                                    Console.WriteLine("Enter the new First name");
+                                    contact.firstName = Console.ReadLine();
+                                    break;
+                                case 2:
+                                    Console.WriteLine("Enter the new Last name");
+                                    contact.lastName = Console.ReadLine();
+                                    break;
+                                case 3:
+                                    Console.WriteLine("Enter the new address");
+                                    contact.address = Console.ReadLine();
+                                    break;
+                                case 4:
+                                    Console.WriteLine("Enter the new city");
+                                    contact.city = Console.ReadLine();
+                                    break;
+                                case 5:
+                                    Console.WriteLine("Enter the new state");
+                                    contact.state = Console.ReadLine();
+                                    break;
+                                case 6:
+                                    Console.WriteLine("Enter the new zip code");
+                                    contact.ZipCode = Console.ReadLine();
+                                    break;
+                                case 7:
+                                    Console.WriteLine("Enter the new phone");
+                                    contact.PhoneNunmber = Console.ReadLine();
+                                    break;
+                                case 8:
+                                    Console.WriteLine("Enter the new E-Mail ID");
+                                    contact.eMail = Console.ReadLine();
+                                    break;
+                                case 9:
+                                    flag = 1;
+                                    break;
+                                default:
+                                    Console.WriteLine("Please enter a valid input");
+                                    EditContact();
+                                    break;
+                            }
+                            if (flag==1)
+                            {
                                 break;
-                            case 2:
-                                Console.WriteLine("Enter the new Last name");
-                                contact.lastName = Console.ReadLine();
-                                break;
-                            case 3:
-                                Console.WriteLine("Enter the new address");
-                                contact.address = Console.ReadLine();
-                                break;
-                            case 4:
-                                Console.WriteLine("Enter the new city");
-                                contact.city = Console.ReadLine();
-                                break;
-                            case 5:
-                                Console.WriteLine("Enter the new state");
-                                contact.state = Console.ReadLine();
-                                break;
-                            case 6:
-                                Console.WriteLine("Enter the new zip code");
-                                contact.ZipCode = Console.ReadLine();
-                                break;
-                            case 7:
-                                Console.WriteLine("Enter the new phone");
-                                contact.PhoneNunmber = Console.ReadLine();
-                                break;
-                            case 8:
-                                Console.WriteLine("Enter the new E-Mail ID");
-                                contact.eMail = Console.ReadLine();
-                                break;
-                            default:
-                                Console.WriteLine("Please enter a valid input");
-                                EditContact();
-                                break;
+                            }
                         }
-                        Console.WriteLine("{0}'s contact has been sucessfully added",editKey);
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("contact of the person {0} does not exist", editKey);
+                        Console.WriteLine("{0}'s contact has been sucessfully added", editKey);
                         break;
                     }
                 }
@@ -129,6 +135,42 @@ namespace AddressBookUsingCollections
             else
             {
                 Console.WriteLine("Your address book is empty");
+            }
+            if (flag==0)
+            {
+
+                Console.WriteLine("contact of the person {0} does not exist", editKey);
+            }
+        }
+        public static void DeleteContact()
+        {
+            Console.WriteLine("Enter the first name of the person whose contact you want to delete from the addressbook");
+            string deleteKey = Console.ReadLine();
+            int flag = 0;
+            if (addressBook.Count>0)
+            {
+                foreach (Contacts contact in addressBook)
+                {
+                    if (deleteKey.ToLower()==contact.firstName.ToLower())
+                    {
+                        flag = 1;
+                        addressBook.Remove(contact);
+                        break;
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Your address book is empty");
+            }
+            if (flag == 0)
+            {
+
+                Console.WriteLine("contact of the person {0} does not exist", deleteKey);
             }
         }
     }

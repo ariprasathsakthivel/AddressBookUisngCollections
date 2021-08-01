@@ -7,6 +7,9 @@ namespace AddressBookUsingCollections
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book program");
+
+            AddressBook.AddContact();
+            AddressBook.ContactsDisplay();
         }
     }
 }

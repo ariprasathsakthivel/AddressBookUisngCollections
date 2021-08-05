@@ -323,5 +323,21 @@ namespace AddressBookUsingCollections
             }
             Console.WriteLine("Total count of persons in the state {0} is {1}", stateKey, statePersons[stateKey].Count);
         }
+
+        public static void AddressBookSorting()
+        {
+            Console.WriteLine("Enter the addressbook name that you want to sort it");
+            string addressBookName = Console.ReadLine();
+            if (mySystem.ContainsKey(addressBookName))
+            {
+                mySystem[addressBookName].Sort((x,y)=>x.firstName.CompareTo(y.firstName));
+                Console.WriteLine("Sorted");
+            }
+            else
+            {
+                Console.WriteLine("The given addressbook does not exist. please enter a valid addressbook  name");
+                AddressBookSorting();
+            }
+        }
     }
 }

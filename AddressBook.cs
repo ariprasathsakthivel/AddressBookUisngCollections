@@ -328,10 +328,11 @@ namespace AddressBookUsingCollections
         {
             Console.WriteLine("Enter the addressbook name that you want to sort it");
             string addressBookName = Console.ReadLine();
+            
             if (mySystem.ContainsKey(addressBookName))
             {
-                mySystem[addressBookName].Sort((x,y)=>x.firstName.CompareTo(y.firstName));
-                Console.WriteLine("Sorted");
+                SortBy(addressBookName);
+                DisplayCompleteAddressBook(addressBookName);
             }
             else
             {
@@ -339,5 +340,41 @@ namespace AddressBookUsingCollections
                 AddressBookSorting();
             }
         }
+        public static void SortBy(string addressBookName)
+        {
+            Console.WriteLine("How do you want the addressbook to be sorted?\n Enter\n1 to sort based on City\n2 to sort based on State\n3 to sort based on Zipcode");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    mySystem[addressBookName].Sort((x, y) => x.city.CompareTo(y.city));
+                    Console.WriteLine("Sorted by City");
+                    break;
+                case "2":
+                    mySystem[addressBookName].Sort((x, y) => x.state.CompareTo(y.state));
+                    Console.WriteLine("Sorted by State");
+                    break;
+                case "3":
+                    mySystem[addressBookName].Sort((x, y) => x.ZipCode.CompareTo(y.ZipCode));
+                    Console.WriteLine("Sorted by ZipCode");
+                    break;
+            }
+        }
+        public static void DisplayCompleteAddressBook(string addressBookName)
+        {
+            foreach (Contacts contact in mySystem[addressBookName])
+            {
+                Console.WriteLine("First name-->{0}", contact.firstName);
+                Console.WriteLine("Last name-->{0}", contact.lastName);
+                Console.WriteLine("Address-->{0}", contact.address);
+                Console.WriteLine("City-->{0}", contact.city);
+                Console.WriteLine("State-->{0}", contact.state);
+                Console.WriteLine("Zip code-->{0}", contact.ZipCode);
+                Console.WriteLine("Phone number-->{0}", contact.PhoneNunmber);
+                Console.WriteLine("E-Mail ID-->{0}", contact.eMail);
+                Console.WriteLine("-----------------------------------------------------");
+            }
+        }
     }
 }
+
+

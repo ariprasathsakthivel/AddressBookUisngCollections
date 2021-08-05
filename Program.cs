@@ -10,7 +10,6 @@ namespace AddressBookUsingCollections
 
             AddressBook.addAddressBook();
             AddressBook.AddressBookSorting();
-            AddressBook.abc("book1");
             //AddressBook.PersonSearch();
             //Console.WriteLine("\n");
             //AddressBook.ContactsDisplay();

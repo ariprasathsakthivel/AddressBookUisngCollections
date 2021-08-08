@@ -7,21 +7,13 @@ namespace AddressBookUsingCollections
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address book program");
+            AddressBookDriver.Driver();
+            //AddressBook.DeserializePass();
+            //AddressBook.AddressBookDisplay();
 
-            AddressBook.addAddressBook();
-            AddressBook.AddressBookSorting();
-            //AddressBook.PersonSearch();
-            //Console.WriteLine("\n");
-            //AddressBook.ContactsDisplay();
-            //Console.WriteLine("\n");
-            //AddressBook.EditContact();
-            //Console.WriteLine("\n");
-            //AddressBook.ContactsDisplay();
-            //Console.WriteLine("\n");
-            //AddressBook.ContactsDisplay();
-            //AddressBook.ContactsDisplay();
-            //AddressBook.ContactsDisplay();
-            //AddressBook.ContactsDisplay();
+            //AddressBook.addressBookNewExisting();
+            //AddressBook.Serializepass();
+
 
         }
     }

@@ -12,12 +12,12 @@ namespace AddressBookUsingCollections
         public static void Serializepass()
         {
 
-            CSVSerializations.Serializations(mySystem);
+            JSONSerializations.Serializations(mySystem);
         }
         public static void DeserializePass()
         {
             mySystem.Clear();
-            mySystem = CSVDeserialization.Deserialization();
+            mySystem = JSONDeserialization.Deserialization(typeof(Dictionary<string,List<Contacts>>));
         }
 
         public static void addressBookNewExisting()

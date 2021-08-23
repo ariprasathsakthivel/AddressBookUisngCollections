@@ -6,7 +6,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace AddressBookUsingCollections
 {
-    [Serializable]
     class Contacts
     {
         public string firstName { get; set; }

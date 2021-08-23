@@ -11,3 +11,6 @@ E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollec
 E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.dll
 E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.pdb
 E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.genruntimeconfig.cache
+E:\C#\AddressBookUsingCollections\bin\Debug\netcoreapp3.1\CsvHelper.dll
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.csproj.CopyComplete
+E:\C#\AddressBookUsingCollections\obj\Debug\netcoreapp3.1\AddressBookUsingCollections.GeneratedMSBuildEditorConfig.editorconfig

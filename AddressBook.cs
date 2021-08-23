@@ -11,17 +11,13 @@ namespace AddressBookUsingCollections
 
         public static void Serializepass()
         {
-            BinarySerializations.Serializations(mySystem);
+
+            CSVSerializations.Serializations(mySystem);
         }
         public static void DeserializePass()
         {
-            Dictionary<string, List<Contacts>> mySystemcopy = BinaryDeserialization.Deserialization();
             mySystem.Clear();
-            foreach (string key in mySystemcopy.Keys)
-            {
-                mySystem.Add(key, mySystemcopy[key]);
-            }
-            mySystemcopy.Clear();
+            mySystem = CSVDeserialization.Deserialization();
         }
 
         public static void addressBookNewExisting()
